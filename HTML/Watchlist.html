@@ -5,11 +5,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="../style.css">
 	<title>Your watchlist</title>
-</head>
+</head> 
 <body>
 <header ><h1 class=secondHeader>
 	Your Watchlist:
 </h1>
+ <input type="text" id=search> 
+ <button id=srch> Search </button>
 
 <button class=add id=addTop>Display Movie</button>
 
@@ -23,9 +25,9 @@
 <footer>
 <button  id=addMovie>Add Movie</button>
 <form > <label> Title<input type="text" class= form id='title'> </label>
- <label> Director<input type="text" class= form id='director' > </label>
-  <label> Length<input type="text"  class= form id='length'> </label>
-   <label> Poster<input type="text"  class= form id='poster'> </label>
+ <label id=txt> Director<input type="text" class= form id='director' > </label>
+  <label id=txt> Length<input type="text"  class= form id='length'> </label>
+   <label id=txt> Poster<input type="text"  class= form id='poster'> </label>
 </form>
 </footer>
 <script src ='../jQuery/code.jquery.com_jquery-3.7.0.js'> </script>

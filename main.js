@@ -20,9 +20,7 @@ setInterval(slideShow,2000)
 
 
 var j=0
-function addMovie () {
-
-   
+function addMovie () { 
 
   
   $('#films').append('<div id='+j+'> <img src='+Movies[j].poster+' class=poster > <div class= textContainer> </div> <button class=display >Learn more</button> <button class=remove> remove </button></div> ') 
@@ -41,9 +39,7 @@ $('.add').on('click', addMovie)
 
 
 
-
- 
-$('#films').on('click', '.display', function (){
+function displayMovie (){
 
 
   var ID= $(this).parent().attr("id")
@@ -58,10 +54,12 @@ $('#films').on('click', '.display', function (){
     else  $('#'+ID+' .textContainer').html('')&&$('#'+ID+' .textContainer').css('background','none')
       
     
-})
+}
 
+ 
+$('#films').on('click', '.display', displayMovie)
 
-$('#films').on('click', '.remove', function (){
+function removeMovie (){
 
 
   var ID= $(this).parent().attr("id")
@@ -70,11 +68,14 @@ $('#films').on('click', '.remove', function (){
  $('#'+ID).hide()
       
     
-})
+}
 
 
 
-$('#addMovie').on('click', function(){
+$('#films').on('click', '.remove', removeMovie)
+
+
+ function makeMovie (){
 
     var ttl= $('#title').val()
     var dir= $('#director').val()
@@ -90,12 +91,39 @@ $('#addMovie').on('click', function(){
 
     }
 
+    if (movie.title.length>0&&movie.director.length>0&&movie['length'].length>0&&movie.poster.length>0)
+
    Movies.push(movie)
     return movie
-
-
       
-})
+}
+
+
+
+$('#addMovie').on('click', makeMovie)
+
+
+function  searchMovie (){
+    var search= $('#search').val()
+    var id =0
+        for (var t=0; t<Movies.length;t++){
+
+
+     for (var key in Movies[t]){
+
+         if(Movies[t][key].toLowerCase()===search.toLowerCase()){
+             $('#films').append('<div id='+t+'> <img src='+Movies[t].poster+' class=poster > <div class= textContainer> </div> <button class=display >Learn more</button> <button class=remove> remove </button></div> ') 
+             
+
+         }               
+             }    
+       }   
+
+}
+
+
+$('#srch').on('click', searchMovie)
+   
 
 
 ;
