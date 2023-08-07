@@ -25,7 +25,7 @@ function addMovie () {
    
 
   
-  $('#films').append('<div id='+j+'> <img src='+Movies[j].poster+' class=poster > <div class= textContainer> </div> <button class=display >Learn more</button></div>') 
+  $('#films').append('<div id='+j+'> <img src='+Movies[j].poster+' class=poster > <div class= textContainer> </div> <button class=display >Learn more</button> <button class=remove> remove </button></div> ') 
 
 
 if (j>Movies.length){
@@ -56,6 +56,18 @@ $('#films').on('click', '.display', function (){
     $('#'+ID+' .textContainer').html('<ul><li>Title: '+Movies[ID].title+'</li><li>Director: '+Movies[ID].director+'</li><li>Length: '+Movies[ID].length+'</li></ul>')
    }
     else  $('#'+ID+' .textContainer').html('')&&$('#'+ID+' .textContainer').css('background','none')
+      
+    
+})
+
+
+$('#films').on('click', '.remove', function (){
+
+
+  var ID= $(this).parent().attr("id")
+  
+ Movies.splice(Number(ID),1)
+ $('#'+ID).hide()
       
     
 })
