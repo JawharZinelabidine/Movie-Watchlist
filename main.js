@@ -21,7 +21,7 @@ setInterval(slideShow,2000)
 $('.textContainer').hide()
 
 
-$('#Parasite').on('click',function () {
+$('#Parasite #display').on('click',function () {
 
 	if ($('#Parasite .textContainer').html().length<=1){
 
@@ -35,7 +35,7 @@ $('#Parasite').on('click',function () {
     
 })
 
-$('#Silence').on('click',function () {
+$('#Silence #display').on('click',function () {
 
 		if ($('#Silence .textContainer').html().length<=1){
 
@@ -50,7 +50,7 @@ $('#Silence').on('click',function () {
     else $('#Silence .textContainer').html('')&&$('#Silence .textContainer').css('background','none')
 })
 
-$('#Goodfellas').on('click',function () {
+$('#Goodfellas #display').on('click',function () {
 
 	if ($('#Goodfellas .textContainer').html().length<=1){
 
@@ -65,7 +65,7 @@ $('#Goodfellas').on('click',function () {
 
 })
 
-$('#Snowpiercer').on('click',function () {
+$('#Snowpiercer #display').on('click',function () {
 
     	if ($('#Snowpiercer .textContainer').html().length<=1){
 
@@ -80,7 +80,7 @@ $('#Snowpiercer').on('click',function () {
 
 })
 
-$('#PulpFiction').on('click',function () {
+$('#PulpFiction #display').on('click',function () {
 
 	   if ($('#PulpFiction .textContainer').html().length<=1){
 

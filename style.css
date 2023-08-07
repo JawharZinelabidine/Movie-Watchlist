@@ -71,5 +71,18 @@ body {
 	float:right;
 }
 
+footer {
+	margin-top: 50px;
+	height: 100px;
+	background-color: limegreen;
 
+}
+
+#add {
+  
+  margin-top: 40px;
+  width: 100px;
+  height: 30px;
+ margin-left: 700px ;
+}
 
