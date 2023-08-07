@@ -29,6 +29,9 @@ color:lightgoldenrodyellow;
 
 body {
 	background-color: darkslategrey;
+	min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .header {
@@ -54,6 +57,17 @@ body {
 
 }
 
+footer {
+	height: 50px;
+	background-color: limegreen;
+	margin-top: auto;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-right: 100px;
+ padding-left: 400px;
+ 
+}
+
 .poster {
 
 	height:250px;
@@ -65,24 +79,36 @@ body {
 
 	height:250px;
 	width:500px;
-	background: lightgoldenrodyellow;
 	display: block;
-	margin-right: 800px;
+	margin-right: 1150px;
 	float:right;
 }
 
-footer {
-	margin-top: 50px;
-	height: 100px;
-	background-color: limegreen;
 
-}
 
-#add {
+#addMovie {
   
-  margin-top: 40px;
+  margin-top: 5px;
   width: 100px;
   height: 30px;
- margin-left: 700px ;
+ margin-right: 300px ;
+  float: right ;
 }
 
+.form {
+
+height: 20px;
+
+
+}
+
+label {
+
+	clear: both;
+}
+
+#addTop {
+
+	float:right;
+
+}
