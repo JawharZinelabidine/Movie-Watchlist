@@ -17,7 +17,7 @@ if (i>=Movies.length-1){
 
 setInterval(slideShow,2000)
 
-
+// Used setInterval here to toggle between the different posters every 2 seconds
 
 var j=0
 function addMovie () { 
@@ -37,6 +37,7 @@ if (j>Movies.length){
 
 $('.add').on('click', addMovie)
 
+//the function above will allow us to add the movies from our array of movies to the watchlist.
 
 
 function displayMovie (){
@@ -59,6 +60,8 @@ function displayMovie (){
  
 $('#films').on('click', '.display', displayMovie)
 
+// The function above will allow us to toggle view the description of the movies in our watchlist. It took me a while to figure out how to get the parent div's ID through clicking it's child button. Learned that I could use $('this') to solve it.
+
 function removeMovie (){
 
 
@@ -74,6 +77,8 @@ function removeMovie (){
 
 $('#films').on('click', '.remove', removeMovie)
 
+
+//The function above allows us to remove movies from our movies array as well as permanently hide them from our watchlist.
 
  function makeMovie (){
 
@@ -98,7 +103,7 @@ $('#films').on('click', '.remove', removeMovie)
       
 }
 
-
+// The factory function above allows us to add new movies to our array.
 
 $('#addMovie').on('click', makeMovie)
 
@@ -124,6 +129,8 @@ function  searchMovie (){
 
 $('#srch').on('click', searchMovie)
    
+
+   // The function above iterates through our movies array to find a match for the value of what we typed in our search box. If a match is found, it will be displayed on our watchlist!
 
 
 ;
