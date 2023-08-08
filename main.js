@@ -47,7 +47,7 @@ function displayMovie (){
  if ($('#'+ID+' .textContainer').html().length<=1){
 
      
-     $('#'+ID+' .textContainer').css('background','lightgoldenrodyellow')
+     $('#'+ID+' .textContainer').css('background','#e3dbdb')
 
     $('#'+ID+' .textContainer').html('<ul><li>Title: '+Movies[ID].title+'</li><li>Director: '+Movies[ID].director+'</li><li>Length: '+Movies[ID].length+'</li></ul>')
    }
